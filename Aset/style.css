@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --main-color : #0D091D;
+    --second-color : #B394FF;
+    --linear-color : linear-gradient(160deg, #D29444, #E087FF, #8566FF);
+}
+
+body{
+    background-color: var(--main-color);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+section{
+    margin-top: 60px;
+}
+
+.container{
+    max-width: 1200px;
+}
+
+/* Navbar dulusss */
+.navbar{
+    
+}
+.nav-wrapper{
+    position: relative;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px;
+
+}
+.menu{
+    display: flex;
+    gap: 50px;
+    
+}
+.tombol{
+    display: none !important;
+    align-items: center;
+    font-size: 35px;
+    color: white;
+}
+
+.menu-item{
+    margin: auto;
+}
+.menu-link{
+    
+    color: white;
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+}
+.menu-link:hover{
+    text-decoration-line: underline;
+}
+.cta{
+    color: white;
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    background: linear-gradient(160deg, #D29444, #E087FF, #8566FF);
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+/* Home nya ygy */
+.home{
+    position: relative;
+    height: 442px;
+    background-image: url(Home.png);
+    background-size: 1200px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.home-page{
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    justify-content: center;
+    padding: 22px;
+    flex-direction: column;
+
+}
+.heading1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 1;
+    padding: 0px;
+    color: #F7E2FD;
+    margin-bottom: 13px;
+   
+}
+.heading2{
+    background: var(--linear-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    margin-bottom: 28px;
+    line-height: 1;
+}
+
+.home-page .deskripsi{
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    color: white;
+}
+.calltoaction{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 37px;
+}
+.home-cta{
+    background: var(--linear-color);
+    color: white;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    padding: 11px 42px;
+    border-radius: 6px;
+}
+.hasil-kerja{
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    padding: 11px 42px;
+    border-radius: 6px;
+}
+.gamba11r{
+    position: absolute;
+    margin: auto;
+    width: 1200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    object-fit: cover;
+    object-position: center;
+}
+.gambar{
+    margin: 0;
+    align-items: center;
+}
+
+/* responsive */
+/* Laptop */
+@media screen and (max-width: 1024px) {
+  
+}
+
+/* hp */
+@media screen and (max-width: 768px){
+/* navbar */
+    .menu{
+        position: absolute;
+        background-color:  #0D091D;
+        display: block;
+        width: px;
+        top: 100%;
+        padding: 30px 30px;
+        left: 0%;
+        height: 100vh;
+        clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+        transition: 0.5s ease-in-out;
+        z-index: 10;
+    }
+    .tombol{
+        transition: transform 0.5s ease-in-out;
+    }
+    .tombol.bx-x{
+        transform: rotate(180deg);
+        transition: 0.5s ease-in-out;
+    }
+    .menu.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        transition: 0.5s ease-in-out;
+    }
+    .menu-link{
+        font-size: 50px;
+    }
+    .menu-item{
+        margin: 30px
+    }
+    .tombol{
+        display: block !important;
+    }
+
+
+/* Home page */
+    .heading1{
+        font-size: 50px;
+    }
+    .heading2{
+        font-size: 45px;
+    }
+}   
+/* hp kecil*/
+@media screen and (max-width: 380px){
+    .menu-link{
+        font-size: 30px;
+    }
+    .menu-item{
+        margin: 25px
+    }
+    .menu{
+        padding: 10px;
+    }
+/* home page */
+    .heading1{
+        font-size: 40px;
+    }
+    .heading2{
+    font-size: 34px;
+    }
+    .deskripsi{
+        font-size: 10px;
+    }
+    .home-cta{
+        padding: 10px, 11px;
+    }
+    .hasil-kerja{
+        font-size: ;
+    }
+}
